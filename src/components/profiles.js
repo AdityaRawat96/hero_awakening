@@ -41,7 +41,7 @@ export default class Profile extends React.Component {
         <div>
           <ProfileCard
             name={profile.name}
-            img={profile.img}
+            thumbnail={profile.thumbnail}
             id={profile._id}
             showDesc={(id) => this.showDesc(id)}
           />

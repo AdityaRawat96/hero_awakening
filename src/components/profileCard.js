@@ -16,7 +16,10 @@ export default class ProfileCard extends React.Component {
       >
         <img
           id="thumbnailImage"
-          src={require("./../assets/images/profiles/" + this.props.img).default}
+          src={
+            require("./../assets/images/profiles/" + this.props.thumbnail)
+              .default
+          }
           alt="img"
         />
         <span>{this.props.name}</span>

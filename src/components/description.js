@@ -16,10 +16,15 @@ export default class Description extends React.Component {
     });
   };
 
+  start = (profile) => {
+    new Audio(require("./../assets/audio/" + profile.audioPath).default).play();
+  };
+
   render() {
     let profile = this.getProfile()[0];
     return (
       <div className="card">
+        <button onClick={() => this.start(profile)}>Play Audio</button>
         <img
           src={require("./../assets/images/profiles/" + profile.img).default}
           alt="img"
