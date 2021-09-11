@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from "react";
+import { Link } from "react-router-dom";
 import Description from "./description";
 import ProfileCard from "./profileCard";
 
@@ -50,6 +51,12 @@ export default class Profile extends React.Component {
     return (
       <div className="profileContent">
         <div className="allProfiles"></div>
+        <Link to="/home">
+          <img
+            src={require("./../assets/images/backbutton-opacity70.png").default}
+          />
+          <h4 style={{ color: "white" }}>Back Button Above</h4>
+        </Link>
         {profileCards}
         {this.state.description}
       </div>
