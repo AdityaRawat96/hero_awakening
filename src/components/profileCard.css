@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  position: relative;
+  width: 25vw;
+  height: 15vw;
+}
+
+#thumbnailImage {
+  width: 15vw;
+  height: 15vw;
+}

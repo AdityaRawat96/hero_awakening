@@ -1,0 +1,122 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+@font-face {
+  font-family: "Augusta";
+  src: url("./assets/fonts/Augusta.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Aquifer";
+  src: url("./assets/fonts/Aquifer.ttf") format("truetype");
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: "Aquifer", sans-serif;
+}
+
+.profileContent {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content-top,
+.content-bottom {
+  position: relative;
+  width: 100%;
+  height: 5vh;
+}
+
+.content-middle {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.content-left,
+.content-right {
+  position: relative;
+  width: 5vh;
+  height: 100%;
+}
+
+.content-main {
+  position: relative;
+  width: 100%;
+  max-height: 90vh;
+  padding: 15vh 6vw;
+}
+
+.content-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heading-span {
+  font-size: 40px;
+  color: white;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.5);
+  margin-bottom: 50px;
+  display: block;
+}
+
+.menu-title {
+  font-size: 25px;
+  color: white;
+  margin-left: 20px;
+}
+
+.menu-item {
+  display: block;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  max-width: fit-content;
+}
+
+.menu-title:hover {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.content-top {
+  background-image: url("./assets/images/border-top.jpg");
+}
+.content-left {
+  background-image: url("./assets/images/border-left.jpg");
+}
+.content-main {
+  background-image: url("./assets/images/mainmenuscreen.jpg");
+}
+.content-right {
+  background-image: url("./assets/images/border-right.jpg");
+}
+.content-bottom {
+  background-image: url("./assets/images/border-bottom.jpg");
+}
+.content-profile {
+  background-image: url("./assets/images/profile-constellation.png");
+}
+
+.profileContent {
+  background-image: url("./assets/images/borderwithscroll.jpg");
+}
+
+@media (max-width: 1200px) {
+  .content-main {
+    background-image: url("./assets/images/mainmenuscreen-sm.jpg");
+  }
+}
