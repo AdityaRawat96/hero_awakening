@@ -39,26 +39,26 @@ export default class Profile extends React.Component {
     let profileCards = this.state.profileData.map((profile) => {
       return (
         <div>
-          <ProfileCard
-            name={profile.name}
-            thumbnail={profile.thumbnail}
-            id={profile._id}
-            showDesc={(id) => this.showDesc(id)}
-          />
+        <ProfileCard
+        name={profile.name}
+        thumbnail={profile.thumbnail}
+        id={profile._id}
+        showDesc={(id) => this.showDesc(id)}
+        />
         </div>
       );
     });
     return (
-      <div className="profileContent">
-        <div className="allProfiles"></div>
-        <Link to="/home">
-          <img
-            src={require("./../assets/images/backbutton-opacity70.png").default}
-          />
-          <h4 style={{ color: "white" }}>Back Button Above</h4>
-        </Link>
-        {profileCards}
-        {this.state.description}
+      <div className="content-section content-main-profile">
+      <div className="profile-container">
+      {profileCards}
+      </div>
+      <div className="profile-description">
+      <Link to="/home" className="backButton">
+      <img src={require("./../assets/images/backbutton-opacity70.png").default} />
+      </Link>
+      {this.state.description}
+      </div>
       </div>
     );
   }

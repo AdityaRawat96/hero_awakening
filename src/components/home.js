@@ -18,88 +18,78 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <div>
-        <div className="content">
-          <div className="content-section content-top"></div>
-          <div className="content-middle">
-            <div className="content-section content-left"></div>
-            <div className="content-section content-main">
-              <span className="heading-span">Hero's Awakening</span>
-              <Link to="/profile" style={{ textDecoration: "none" }}>
-                <div
-                  className="menu-item"
-                  onMouseOver={() =>
-                    this.setState({
-                      ...this.state,
-                      playState: false,
-                    })
-                  }
-                  onMouseOut={() =>
-                    this.setState({
-                      ...this.state,
-                      playState: true,
-                    })
-                  }
-                >
-                  <span className="menu-icon">
-                    {this.state.playState && <img src={playUp} alt="img" />}
-                    {!this.state.playState && <img src={playDown} alt="img" />}
-                  </span>
-                  <span className="menu-title">Play</span>
-                </div>
-              </Link>
-              <div
-                className="menu-item"
-                onMouseOver={() =>
-                  this.setState({
-                    ...this.state,
-                    settingsState: false,
-                  })
-                }
-                onMouseOut={() =>
-                  this.setState({
-                    ...this.state,
-                    settingsState: true,
-                  })
-                }
-              >
-                <span className="menu-icon">
-                  {this.state.settingsState && (
-                    <img src={settingsUp} alt="img" />
-                  )}
-                  {!this.state.settingsState && (
-                    <img src={settingsDown} alt="img" />
-                  )}
-                </span>
-                <span className="menu-title">Settings</span>
-              </div>
-              <div
-                className="menu-item"
-                onMouseOver={() =>
-                  this.setState({
-                    ...this.state,
-                    profileState: false,
-                  })
-                }
-                onMouseOut={() =>
-                  this.setState({
-                    ...this.state,
-                    profileState: true,
-                  })
-                }
-              >
-                <span className="menu-icon">
-                  {this.state.profileState && <img src={profileUp} alt="img" />}
-                  {!this.state.profileState && (
-                    <img src={profileDown} alt="img" />
-                  )}
-                </span>
-                <span className="menu-title">Profile</span>
-              </div>
-            </div>
-            <div className="content-section content-right"></div>
+      <div className="content-section content-main">
+        <span className="heading-span">Hero's Awakening</span>
+        <Link to="/profile" style={{ textDecoration: "none" }}>
+          <div
+            className="menu-item"
+            onMouseOver={() =>
+              this.setState({
+                ...this.state,
+                playState: false,
+              })
+            }
+            onMouseOut={() =>
+              this.setState({
+                ...this.state,
+                playState: true,
+              })
+            }
+          >
+            <span className="menu-icon">
+              {this.state.playState && <img src={playUp} alt="img" />}
+              {!this.state.playState && <img src={playDown} alt="img" />}
+            </span>
+            <span className="menu-title">Play</span>
           </div>
-          <div className="content-section content-bottom"></div>
+        </Link>
+        <div
+          className="menu-item"
+          onMouseOver={() =>
+            this.setState({
+              ...this.state,
+              settingsState: false,
+            })
+          }
+          onMouseOut={() =>
+            this.setState({
+              ...this.state,
+              settingsState: true,
+            })
+          }
+        >
+          <span className="menu-icon">
+            {this.state.settingsState && (
+              <img src={settingsUp} alt="img" />
+            )}
+            {!this.state.settingsState && (
+              <img src={settingsDown} alt="img" />
+            )}
+          </span>
+          <span className="menu-title">Settings</span>
+        </div>
+        <div
+          className="menu-item"
+          onMouseOver={() =>
+            this.setState({
+              ...this.state,
+              profileState: false,
+            })
+          }
+          onMouseOut={() =>
+            this.setState({
+              ...this.state,
+              profileState: true,
+            })
+          }
+        >
+          <span className="menu-icon">
+            {this.state.profileState && <img src={profileUp} alt="img" />}
+            {!this.state.profileState && (
+              <img src={profileDown} alt="img" />
+            )}
+          </span>
+          <span className="menu-title">Profile</span>
         </div>
       </div>
     );

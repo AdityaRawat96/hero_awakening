@@ -1,4 +1,5 @@
 import React from "react";
+import "./description.css";
 
 export default class Description extends React.Component {
   constructor(props) {
@@ -23,14 +24,15 @@ export default class Description extends React.Component {
   render() {
     let profile = this.getProfile()[0];
     return (
-      <div className="card">
-        <button onClick={() => this.start(profile)}>Play Audio</button>
+      <div className="description-card">
+        <div className="profile-image-container">
         <img
           src={require("./../assets/images/profiles/" + profile.img).default}
-          alt="img"
+          alt="profile-image"
         />
-        <br />
-        <h4>{profile.title}</h4>
+        </div>
+        <h4>{'"'+profile.title+'I do things"'}</h4>
+        <button onClick={() => this.start(profile)}>Play Audio</button>
         <ul>{this.getTraits(profile)}</ul>
       </div>
     );

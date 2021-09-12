@@ -9,20 +9,19 @@ export default class ProfileCard extends React.Component {
   render() {
     return (
       <div
-        className="card"
-        onClick={() => {
-          this.props.showDesc(this.props.id);
-        }}
+      className="profile-card"
+      onClick={() => {
+        this.props.showDesc(this.props.id);
+      }}
       >
-        <img
-          id="thumbnailImage"
-          src={
-            require("./../assets/images/profiles/" + this.props.thumbnail)
-              .default
-          }
-          alt="img"
-        />
-        <span>{this.props.name}</span>
+      <span className="profile-title">{this.props.name}</span>
+      <img
+      className="profile-thumbnail"
+      id="thumbnailImage"
+      src={ require("./../assets/images/profiles/" + this.props.thumbnail).default }
+      alt="profile-image"
+      />
+      <div className="profile-border"></div>
       </div>
     );
   }
