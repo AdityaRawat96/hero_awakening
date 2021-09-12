@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./description.css";
 
 export default class Description extends React.Component {
@@ -26,13 +27,16 @@ export default class Description extends React.Component {
     return (
       <div className="description-card">
         <div className="profile-image-container">
-        <img
-          src={require("./../assets/images/profiles/" + profile.img).default}
-          alt="profile-image"
-        />
+          <img
+            src={require("./../assets/images/profiles/" + profile.img).default}
+            alt="profile-image"
+          />
         </div>
-        <h4>{'"'+profile.title+'I do things"'}</h4>
+        <h4>{profile.desc.title}</h4>
         <button onClick={() => this.start(profile)}>Play Audio</button>
+        <Link to="/player" style={{ textDecoration: "none" }}>
+          <button>Select BirthSign</button>
+        </Link>
         <ul>{this.getTraits(profile)}</ul>
       </div>
     );
