@@ -59,12 +59,8 @@ export default class Home extends React.Component {
           }
         >
           <span className="menu-icon">
-            {this.state.settingsState && (
-              <img src={settingsUp} alt="img" />
-            )}
-            {!this.state.settingsState && (
-              <img src={settingsDown} alt="img" />
-            )}
+            {this.state.settingsState && <img src={settingsUp} alt="img" />}
+            {!this.state.settingsState && <img src={settingsDown} alt="img" />}
           </span>
           <span className="menu-title">Settings</span>
         </div>
@@ -85,9 +81,7 @@ export default class Home extends React.Component {
         >
           <span className="menu-icon">
             {this.state.profileState && <img src={profileUp} alt="img" />}
-            {!this.state.profileState && (
-              <img src={profileDown} alt="img" />
-            )}
+            {!this.state.profileState && <img src={profileDown} alt="img" />}
           </span>
           <span className="menu-title">Profile</span>
         </div>
